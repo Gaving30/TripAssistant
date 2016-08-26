@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:gravity="center_horizontal"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.example.gavingaughranext.tripassistant.CurrencyActivity"
+    tools:showIn="@layout/activity_currency"
+    android:background="#FFF5EE">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="@string/main_heading"
+        android:id="@+id/textView"
+        android:textSize="28sp"
+        android:layout_centerHorizontal="true"
+        android:fontFamily="Serif" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="@string/currency_heading"
+        android:id="@+id/textViewCurrencyHeading"
+        android:layout_below="@+id/textView"
+        android:layout_centerHorizontal="true" />
+
+    <Spinner
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/spinnerCurrency"
+        android:layout_centerVertical="true"
+        android:layout_alignParentStart="true"
+        android:layout_centerHorizontal="true"/>
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="numberDecimal"
+        android:ems="10"
+        android:id="@+id/editTextEnterEuroAmount"
+        android:hint="@string/EnterAmountTo"
+        android:textAlignment="center"
+        android:layout_marginBottom="41dp"
+        android:layout_above="@+id/spinnerCurrency"
+        android:layout_alignEnd="@+id/textView" />
+
+    <Button
+        android:layout_width="150dp"
+        android:layout_height="70dp"
+        android:text="@string/ConvertButton"
+        android:id="@+id/button"
+        android:gravity="center_horizontal"
+        android:layout_marginBottom="63dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="@string/ConvertToText"
+        android:id="@+id/textViewCovertText"
+        android:textAlignment="center"
+        android:layout_marginBottom="31dp"
+        android:layout_above="@+id/editTextEnterEuroAmount"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="@string/ToText"
+        android:id="@+id/textViewToText"
+        android:textAlignment="center"
+        android:layout_above="@+id/spinnerCurrency"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:id="@+id/textViewCurrencyAnswer"
+        android:layout_alignParentStart="true"
+        android:layout_alignEnd="@+id/spinnerCurrency"
+        android:layout_above="@+id/button"
+        android:textAlignment="center"
+        android:layout_below="@+id/spinnerCurrency"
+        android:gravity="bottom"
+        android:textSize="30sp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="€"
+        android:id="@+id/textView2"
+        android:layout_alignTop="@+id/editTextEnterEuroAmount"
+        android:layout_alignParentStart="true"
+        android:layout_alignBottom="@+id/editTextEnterEuroAmount"
+        android:layout_toStartOf="@+id/editTextEnterEuroAmount"
+        android:textAlignment="viewEnd"
+        android:textSize="35sp" />
+
+    <Button
+        android:layout_width="150dp"
+        android:layout_height="70dp"
+        android:text="@string/showAll"
+        android:id="@+id/showAll"
+        android:gravity="center_horizontal"
+        android:layout_alignBottom="@+id/button"
+        android:layout_alignParentEnd="true" />
+
+</RelativeLayout>

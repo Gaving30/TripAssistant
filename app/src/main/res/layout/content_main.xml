@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:gravity="center_horizontal"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.example.gavingaughranext.tripassistant.MainActivity"
+    tools:showIn="@layout/activity_main"
+    android:background="#FFF5EE">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="@string/main_heading"
+        android:id="@+id/textView"
+        android:layout_alignParentTop="true"
+        android:textSize="32dp"
+        android:layout_alignRight="@+id/imageView"
+        android:layout_alignEnd="@+id/imageView"
+        android:layout_alignLeft="@+id/imageView"
+        android:layout_alignStart="@+id/imageView"
+        android:gravity="center_horizontal" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/imageView"
+        android:src="@drawable/map"
+        android:layout_below="@+id/textView"
+        android:layout_marginTop="30dp"
+        android:contentDescription="@string/map_image" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/time_button_text"
+        android:id="@+id/timeButton"
+        android:layout_marginTop="26dp"
+        android:layout_below="@+id/imageView"
+        android:layout_alignLeft="@+id/imageView"
+        android:layout_alignStart="@+id/imageView"
+        android:layout_alignRight="@+id/imageView"
+        android:layout_alignEnd="@+id/imageView" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/currency_button_title"
+        android:id="@+id/currencyButton"
+        android:layout_below="@+id/timeButton"
+        android:layout_alignLeft="@+id/timeButton"
+        android:layout_alignStart="@+id/timeButton"
+        android:layout_alignRight="@+id/timeButton"
+        android:layout_alignEnd="@+id/timeButton" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/country_information_button"
+        android:id="@+id/countryInformationButton"
+        android:layout_below="@+id/currencyButton"
+        android:layout_alignStart="@+id/currencyButton"
+        android:layout_alignEnd="@+id/currencyButton" />
+
+</RelativeLayout>
